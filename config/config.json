@@ -1,0 +1,23 @@
+{
+  "development": {
+    "use_env_variable": "DATABASE_URL"
+  },
+  "test": {
+    "use_env_variable": "DB_USER",
+    "use_env_variable": "DB_PASS",
+    "use_env_variable": "DB_PRODUCTION",
+    "dialect": "postgres"
+  },
+  "production": {
+    "use_env_variable": "DB_USER",
+    "use_env_variable": "DB_PASS",
+    "use_env_variable": "DB_PRODUCTION",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "rejectUnauthorized": false,
+        "ssl": true
+      }
+    }
+  }
+}
